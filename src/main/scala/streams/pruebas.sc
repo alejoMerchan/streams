@@ -1,5 +1,5 @@
-val vector = Vector(Vector('S', 'T'), Vector('o', 'o'), Vector('o', 'o')).reverse
+val vector = List(Vector('o','o', 'o', '-', '-', '-', '-', '-', '-', '-'), Vector('o', 'S', 'o', 'o', 'o', 'o', '-', '-', '-', '-'), Vector('o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', '-'), Vector('-', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'), Vector('-', '-', '-', '-', '-', 'o', 'o', 'T', 'o', 'o'), Vector('-', '-', '-', '-', '-', '-', 'o', 'o', 'o', '-'))
 
-val y = vector.indexWhere(x => x.contains('S'))
-val x = vector(y).indexWhere(x => x == 'S')
+val x = vector.zipWithIndex
+val y = vector.zipWithIndex.map(y => y._1.zipWithIndex)
 
